@@ -1,0 +1,409 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+
+.filterDiv{
+  display: none;
+}
+.show{
+  display: block;
+}
+body {
+background-color:lightgrey;
+}
+
+a.nav-link {
+color:black;}
+
+li :hover {
+
+}
+
+
+.navbar {
+margin:0px;
+padding:0;
+height:60px;
+border-bottom: 1px solid lightgrey;
+background-color:white;
+
+}
+
+
+ .active {
+ background-color:lightgrey;
+ height:50px;
+
+ }
+
+ .navbar-brand {
+ background-color:yellow;
+ height:60px;
+ padding:10px 15px;
+ color:black;
+ text-align:center;
+ }
+.navbar-brand a:hover {
+  background-color: black;
+  color:yellow;
+}
+
+
+
+.list-inline-item a{
+color:black;
+text-decoration:none;
+font-size:23px;
+text-align:center;
+}
+
+.text {
+font-size:-15px;
+font-family:fantasy;
+
+}
+.c {
+  text-shadow: 0 1px 0 rgba(255,255,255,.7);
+  color: #90939a;
+  font-size:-10px;
+  font-weight: 500;
+line-height: 1;
+text-align: center;
+background-color:lightgrey;
+color:grey;
+display: inline-block;
+margin-bottom: 5px;
+padding: 4px 8px;
+border: 0;
+border-radius: 3px;
+
+}
+
+.list-inline-item a:hover {
+color:blue;
+
+}
+
+.genres {
+  font-size: -3px;
+color:grey;
+}
+
+.generes:hover {
+  color:grey;
+}
+
+.container {
+background-color:white;
+padding:10px;
+height:1300px;
+}
+.pic {
+margin:20px;
+padding:-5px;
+}
+.form-control-borderless {
+border:none;
+
+}
+
+.form-control-borderless:hover, .form-control-borderless:active, .form-control-borderless:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.search {
+margin:10px;
+padding:5px 10px;
+}
+
+.top {
+height:52px;
+margin:-10px;
+padding: :20px 10px;
+}
+.p {
+  padding:5px;
+  margin:10px;
+  font-weight:bold;
+}
+.brand a:hover{
+  color:yellow;
+  background-color: black;
+}
+
+
+</style>
+
+<body>
+<nav class="navbar navbar-expand-sm fixed-top">
+<div class="navbar-header">
+ <a class="navbar-brand brand" href="index.html">Show<b>Trackr</b></a>
+ </div>
+<ul class="navbar-nav align-items-center">
+
+<li class="nav-item"><a class="nav-link active" href="index.html" onclick="filterSelectio('all')" id="0">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="add.html">Add</a></li>
+</ul>
+<ul class="navbar-nav ml-auto">
+<li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+<li class="nav-item"><a class="nav-link" href="signup.html">Sign up</a></li>
+</ul>
+</nav>
+
+<center>
+
+<div class="row">
+<div class="col-sm-12">
+<div class="jumbotron">
+
+<ul class="list-inline align-items-center">
+  <a href="#" class="active " onclick="filterSelection('all')"> </a>
+
+<li class="list-inline-item"><a href="#" onclick="filterSelection('D')">0-9</a></li>
+<li class="list-inline-item"><a href="#" onclick="filterSelection('A')">A</a></li>
+<li class="list-inline-item"><a href="#" onclick="filterSelection('B')">B</a></li>
+<li class="list-inline-item"><a href="#" onclick="filterSelection('C')">C</a></li>
+<li class="list-inline-item"><a href="#" onclick="filterSelection('0-9')">D</a></li>
+<li class="list-inline-item"><a href="#" onclick="filterSelection('E')">E</a></li>
+<li class="list-inline-item"><a href="#" onclick="filterSelection('F')">F</a></li>
+<li class="list-inline-item"><a href="#" onclick="filterSelection('G')">G</a></li>
+<li class="list-inline-item"><a href="#" onclick="filterSelection('H')">H</a></li>
+<li class="list-inline-item"><a href="#" onclick="filterSelection('I')">I</a></li>
+<li class="list-inline-item"><a href="#" onclick="filterSelection('J')">J</a></li>
+<li class="list-inline-item"><a href="#" onclick="filterSelection('K')">K</a></li>
+<li class="list-inline-item"><a href="#" onclick="filterSelection('L')">L</a></li>
+<li class="list-inline-item"><a href="#" onclick="filterSelection('M')">M</a></li>
+<li class="list-inline-item"><a href="#" onclick="filterSelection('N')">N</a></li>
+<li class="list-inline-item"><a href="#" onclick="filterSelection('O')">O</a></li>
+<li class="list-inline-item"><a href="#" onclick="filterSelection('P')">P</a></li>
+<li class="list-inline-item"><a href="#" onclick="filterSelection('Q')">Q</a></li>
+<li class="list-inline-item"><a href="#" onclick="filterSelection('R')">R</a></li>
+<li class="list-inline-item"><a href="#" onclick="filterSelection('S')">S</a></li>
+<li class="list-inline-item"><a href="#" onclick="filterSelection('T')">T</a></li>
+<li class="list-inline-item"><a href="#" onclick="filterSelection('U')">U</a></li>
+<li class="list-inline-item"><a href="#" onclick="filterSelection('V')">V</a></li>
+<li class="list-inline-item"><a href="#" onclick="filterSelection('W')">W</a></li>
+<li class="list-inline-item"><a href="#" onclick="filterSelection('x')">X</a></li>
+<li class="list-inline-item"><a href="#" onclick="filterSelection('y')">Y</a></li>
+<li class="list-inline-item"><a href="#" onclick="filterSelection('z')">Z</a></li>
+</ul>
+
+
+
+
+
+
+
+<div class="text">
+<ul class="list-inline  genres">
+<li class="list-inline-item c"><a href="#" onclick="filterSelection('action')">Action</a></li>
+<li class="list-inline-item c"><a href="#" onclick="filterSelection('adven')">Adventure</a></li>
+<li class="list-inline-item c"><a href="#" onclick="filterSelection('animation')">Animation</a></li>
+<li class="list-inline-item c"><a href="#" onclick="filterSelection('children')">Children</a></li>
+<li class="list-inline-item c"><a href="#" onclick="filterSelection('comedy')">Comedy</a></li>
+<li class="list-inline-item c"><a href="#" onclick="filterSelection('crime')">Crime</a></li>
+<li class="list-inline-item c"><a href="#" onclick="filterSelection('documentary')">Documentary</a></li>
+<li class="list-inline-item c"><a href="#" onclick="filterSelection('family')">Family</a></li>
+<li class="list-inline-item c"><a href="#" onclick="filterSelection('fantasy')">Fantasy</a></li>
+<li class="list-inline-item c"><a href="#" onclick="filterSelection('food')">Food</a></li>
+<li class="list-inline-item c"><a href="#" onclick="filterSelection('home')">Home and Garden</a></li>
+<li class="list-inline-item c"><a href="#" onclick="filterSelection('horror')">Horror</a></li>
+<li class="list-inline-item c"><a href="#" onclick="filterSelection('mini')">Mini-Series</a></li>
+<li class="list-inline-item c"><a href="#" onclick="filterSelection('my')">Mystery</a></li>
+<li class="list-inline-item c"><a href="#" onclick="filterSelection('news')">News</a></li>
+<li class="list-inline-item c"><a href="#" onclick="filterSelection('reality')">Reality</a></li>
+<li class="list-inline-item c"><a href="#" onclick="filterSelection('romance')">Romance</a></li>
+<li class="list-inline-item c"><a href="#" onclick="filterSelection('sci')">Sci-Fi</a></li>
+<li class="list-inline-item c"><a href="#" onclick="filterSelection('sport')">Sport</a></li>
+<li class="list-inline-item c"><a href="#" onclick="filterSelection('suspense')">Suspense</a></li>
+<li class="list-inline-item c"><a href="#" onclick="filterSelection('talk')">Talk Show</a></li>
+<li class="list-inline-item c"><a href="#" onclick="filterSelection('thriller')">Thriller</a></li>
+<li class="list-inline-item c"><a href="#" onclick="filterSelection('travel')">Travel</a></li>
+</ul></div>
+</div>
+</div>
+</div>
+
+
+
+
+<center>
+
+
+
+<div class="container">
+<div class="row" >
+<div class="col-sm-12">
+<nav class="navbar navbar-expand-sm navbar-light bg-light top">
+<p class="p">TOP 12 SHOWS</p>
+
+<form class="form-inline align-item center ml-auto search">
+<input class="form-control  form-control-borderless  ml-auto bg-light" type="text" placeholder="Search..." aria-lable="search">
+<form>
+
+</nav>
+
+
+
+
+<div class="row" >
+<div class="col-sm-3">
+  <div class="filterDiv B crime action">
+  <a href="subscribe.html">
+<img class="rounded pic"  src="pic6.jpeg" alt="do" width="220PX" height="320px" ></img>
+<a>Games of Thrones</a>
+</a>
+<p class="text-muted">Episode 10</p>
+</div>
+</div>
+
+<div class="col-sm-3">
+  <div class=" filterDiv T family sci comedy">
+<img class="rounded pic" src="pic2.jpeg" width="220px" height="320px">
+<a>The Big Bang Theory</a>
+<p class="text-muted">Episode</p>
+</div>
+</div>
+
+
+<div class="col-sm-3">
+  <div class="filterDiv A fantasy thriller">
+<img class="rounded pic" src="pic3.jpeg" width="220px" height="320px">
+<a>Arrow</a>
+<p class="text-muted">Episode</p>
+</div>
+</div>
+
+
+<div class="col-sm-3">
+  <div class=" filterDiv V thriller horror adven">
+<img class="rounded pic" src="pic4.jpeg" width="220px" height="320px">
+<a>Viking</a>
+<p class="text-muted">Episode</p>
+</div>
+</div></div>
+
+<div class="row" >
+
+<div class="col-sm-3">
+    <div class="filterDiv S mini talk">
+<img class="rounded pic" src="pic5.jpeg" width="220px" height="320px">
+<a>Silicon Valley</a>
+<p class="text-muted">Episode</p>
+</div>
+</div>
+
+
+<div class="col-sm-3">
+<div class="filterDiv S action adven">
+<img class="rounded pic" src="pic.jpeg" width="220px" height="320px">
+<a>Breaking Bad</a>
+<p class="text-muted">Episode</p>
+</div>
+</div>
+
+
+
+<div class="col-sm-3">
+  <div class="filterDiv G thriller suspense">
+<img class="rounded pic" src="pic7.jpeg" width="220px" height="320px">
+<a>Lost</a>
+<p class="text-muted">Episode</p>
+</div>
+</div>
+
+
+
+<div class="col-sm-3">
+  <div class="filterDiv L My adven">
+<img class="rounded pic" src="pic8.jpeg" width="220px" height="320px">
+<a>Sherlock</a>
+<p class="text-muted">Episode</p>
+</div>
+</div>
+</div>
+
+
+
+<div class="row" >
+
+<div class="col-sm-3">
+    <div class="filterDiv S adven action">
+<img class="rounded pic" src="pic10.jpeg" width="220px" height="320px">
+<a>Lucifer</a>
+<p class="text-muted">Episode</p>
+</div>
+</div>
+
+
+<div class="col-sm-3">
+    <div class="filterDiv D adven action">
+<img class="rounded pic" src="pic11.jpeg" width="220px" height="320px">
+<a>Dead</a>
+<p class="text-muted">Episode</p>
+</div>
+</div>
+
+
+
+
+  </div>
+
+</div>
+</div>
+
+
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+var x, i;
+x = document.getElementsByClassName("filterDiv");
+if (c == "all") c = "";
+// Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+for (i = 0; i < x.length; i++) {
+  w3RemoveClass(x[i], "show");
+  if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+}
+}
+
+// Show filtered elements
+function w3AddClass(element, name) {
+var i, arr1, arr2;
+arr1 = element.className.split(" ");
+arr2 = name.split(" ");
+for (i = 0; i < arr2.length; i++) {
+  if (arr1.indexOf(arr2[i]) == -1) {
+    element.className += " " + arr2[i];
+  }
+}
+}
+
+// Hide elements that are not selected
+function w3RemoveClass(element, name) {
+var i, arr1, arr2;
+arr1 = element.className.split(" ");
+arr2 = name.split(" ");
+for (i = 0; i < arr2.length; i++) {
+  while (arr1.indexOf(arr2[i]) > -1) {
+    arr1.splice(arr1.indexOf(arr2[i]), 1);
+  }
+}
+element.className = arr1.join(" ");
+}
+
+</script>
+
+
+
+
+
+</body>
+</html>

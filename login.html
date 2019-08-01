@@ -1,0 +1,142 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+background-color:#E4E7EC;
+}
+
+a.navbar-brand  {
+background-color:#FFE939;
+padding:20px;
+margin :0px 0px 0px -15px;
+}
+
+.navbar {
+margin:0;
+padding:0;
+height:50px;
+overflow:hidden;
+border-bottom:1px solid lightgrey;
+background-color:white;
+}
+
+
+
+
+ h2 {
+    font-family: Avenir,  sans-serif;
+    font-weight: bold;
+    line-height: 1.1;
+    color: rgb(17, 17, 17);
+}
+
+
+
+.btn {
+border-radius:0px;
+margin: 5px;
+}
+
+.input-lg {
+    height: 40px;
+    font-size: 18px;
+    line-height: 1.33333;
+    padding: 10px 16px;
+width:360px;
+}
+</style>
+
+</head>
+
+
+<body>
+<!--navbar start here-->
+<nav class="navbar navbar-expand-sm navbar-light fixed-top">
+<div class="navbar-header">
+ <a class="navbar-brand" href="index.html">Show<b>Trackr</b></a>
+ </div>
+<ul class="navbar-nav align-items-center">
+
+<li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="add.html">Add</a></li>
+</ul>
+<ul class="navbar-nav ml-auto">
+<li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+<li class="nav-item"><a class="nav-link" href="signup.html">Sign up</a></li>
+</ul>
+</nav>
+<!--navbar end here-->
+
+
+<div class="row" style="height:800px; background-color:#cccccc;">
+   <div class="col-sm-4"></div>
+   <div class="col-sm-3"style="background-color:white; height:500px; margin-top:80px; width:300px;"><br>
+
+<div class="container">
+<center>
+ <h1><b>Log in</b></h1>
+ <form>
+
+  <input type="text"  placeholder="&#64; Email" name="email" id="myUser" class="input-lg"><br><br>
+
+
+
+  <input type="password"  placeholder="&#x1F5DD; Password" name="pswd" id="myPassword" class="input-lg a"><br>
+  <span id="demo"> </span>
+  <br>
+ <button type="button" id="myButton" class="btn btn-success btn-block">Log in</button>
+  <p><b>Forgot Your Password?</b></p>
+
+     <p>Don't have an account yet?<b><a href="signup.html">Sign up</a> </b></p>
+
+
+<div class="row">
+    <div class="col"><hr></div>
+    <div class="col-auto"><b>or</b></div>
+    <div class="col"><hr></div>
+</div>
+
+   <button type="button"  class="btn btn-primary btn-block"><i class="fa fa-facebook-f"></i>Sign in with Facebook</button>
+   <button type="button"  class="btn btn-danger btn-block"><i class="fa fa-google-plus-square"></i>Sign in with Google</button>
+ </form>
+</div>
+</div>
+
+<script>
+var sys = {
+users: [{username: "rathi",password: "rathi1"},
+     {username: "Kidu",password: "kidu2"},
+     {username: "abi",password: "abi3"},
+     {username: "sharmi",password: "sarmi4"},
+     {username: "isha",password: "isha5"}],
+
+
+ addUser: function() {
+   var myUser = document.getElementById('myUser').value
+   var myPassword = document.getElementById('myPassword').value
+   var check = this.users.some(function(e) {
+       return e.username == myUser && e.password == myPassword
+   })
+
+   document.getElementById('demo').innerHTML = check ? "<span style='color:green;'>" + "Successful" + "</span>" : "<span style='color:red; '>" + "Unsuccessful" + "</span>";
+ }
+};
+
+
+document.getElementById("myButton").addEventListener("click", sys.addUser.bind(sys));
+
+
+
+
+</script>
+
+
+
+
+</body>
+</html>
